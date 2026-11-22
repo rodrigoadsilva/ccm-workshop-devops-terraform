@@ -1,0 +1,30 @@
+{
+  "name": "Workshop DevOps - Terraform",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "1.17.2"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hashicorp.terraform"
+      ]
+    },
+    "codespaces": {
+      "openFiles": [
+        "labs/01-primeiro-apply/README.md"
+      ]
+    }
+  },
+  "forwardPorts": [
+    8080
+  ],
+  "portsAttributes": {
+    "8080": {
+      "label": "Nginx do lab"
+    }
+  }
+}
