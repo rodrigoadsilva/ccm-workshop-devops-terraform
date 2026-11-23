@@ -13,7 +13,8 @@ provider "docker" {}
 # Resource 1: a imagem do Nginx, baixada do Docker Hub.
 # A versão é fixa (1.27) para que todos tenham exatamente o mesmo resultado.
 resource "docker_image" "nginx" {
-  name = "nginx:1.27"
+  name         = "nginx:1.27"
+  keep_locally = true
 }
 
 # Resource 2: o container que roda a imagem.

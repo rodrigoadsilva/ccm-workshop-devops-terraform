@@ -25,7 +25,8 @@ locals {
 }
 
 resource "docker_image" "nginx" {
-  name = "nginx:1.27"
+  name         = "nginx:1.27"
+  keep_locally = true
 }
 
 resource "docker_container" "web" {

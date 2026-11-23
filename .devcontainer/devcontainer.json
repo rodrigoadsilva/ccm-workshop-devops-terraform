@@ -9,9 +9,12 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": [
-        "hashicorp.terraform"
-      ]
+      "extensions": ["hashicorp.terraform"],
+      "settings": {
+        "workbench.editorAssociations": {
+          "*.md": "vscode.markdown.preview.editor"
+        }
+      }
     },
     "codespaces": {
       "openFiles": [
